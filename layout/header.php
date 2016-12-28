@@ -1,36 +1,55 @@
-<?php
-session_start();
-include "config.php";
-?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Twitter Api</title>
-    <base href="<?php echo $baseUrl;?>" />
-    <link rel="stylesheet" href="css/twitter.css"/>
+  <?php
+  session_start();
+  include "config.php";
+  ?>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Socialogin | Twitter</title>
+      <base href="<?php echo $baseUrl;?>" />
+      <link rel="stylesheet" href="css/twitter.css"/>
 
-</head>
-<body>
+      <!-- Bootstrap -->
+      <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../static/css/twitterstyle.css" rel="stylesheet">
 
-<header>
-    <div class="container">
-        <div id="logo">
-            <h2><a href="index"> Twitter Api </a></h2>
-        </div>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+
+    <body>
+      <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Socialogin</a>
+          </div>
+          <center>
+              <div class="navbar-collapse collapse" id="navbar-main">
+                  <ul class="nav navbar-nav">
+                      <li><a href="/#wtopnedir">Neler Yapabilirim ?</a></li>
+                      <li><a href="/#nasil">Kullanım</a></li>
+
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/accounts/login"><i class="glyphicon glyphicon-circle-arrow-right"></i> Twitter İle Bağlan</a>
+                  </ul>
+
+              </div>
+          </center>
+      </div>
     </div>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#"> Ana Sayfa </a> </li>
-        <li><a href="profile"> Profilim </a> </li>
-        <li><a href='friends'>Takip Edilen</a></li>
-        <li><a href='followers'>Takipçiler</a></li>
-        <li><a href='logout'>Çıkış</a></li>
-    </ul>
-</nav>
-
-
-<div class="container">
-
+      <!-- Carousel
+      ================================================== -->
