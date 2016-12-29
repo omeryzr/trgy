@@ -3,7 +3,7 @@ include "layout/header.php";
 
 require "vendor/TwitterOAuth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
-
+echo "<br><br><br><br><br><br><br>";
 if (!isset($_SESSION['access_token'])) {
     include 'login.php';
 }
