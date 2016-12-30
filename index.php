@@ -3,7 +3,7 @@ include "layout/header.php";
 
 require "vendor/TwitterOAuth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
-echo "<br><br><br><br><br><br><br>";
+echo"<br><br><br><div class='container theme-showcase' role='main'>";
 if (!isset($_SESSION['access_token'])) {
     include 'login.php';
 }
@@ -14,7 +14,7 @@ else
     $connectionOauth->setTimeouts(30, 30);
     $accountCredentials = $connectionOauth->get("account/verify_credentials");
 
-    echo"<br><br><br><div class='container theme-showcase' role='main'>
+    echo"
         <div id ='leftColumn'>
             <img src='$accountCredentials->profile_banner_url' alt='$accountCredentials->name' title='$accountCredentials->name' id='profileBanner' />
             <img src='$accountCredentials->profile_image_url' alt='$accountCredentials->name' title='$accountCredentials->name' id='profileImage' />
@@ -75,7 +75,7 @@ else
             ";
     }
 
-    echo "</div></div>";
+    echo "</div>";
 }
-
+echo "</div>";
 include "layout/footer.php";
