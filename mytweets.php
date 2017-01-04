@@ -9,7 +9,8 @@ use Abraham\TwitterOAuth\TwitterOAuth;
     $connectionOauth->setTimeouts(30, 30);
 
     $username = 'omryazir';
-    $tweets = $connectionOauth->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count=2");
+    $tweets = $connectionOauth->get("https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$username.'&count=2");
+
     print_r( $tweets );
 
 
