@@ -1,5 +1,5 @@
 <?php
-include "layout/header.php";
+
 
 require "vendor/TwitterOAuth/autoload.php";
 
@@ -13,7 +13,7 @@ if (isset($_REQUEST['oauth_verifier'], $_REQUEST['oauth_token']) && $_REQUEST['o
     $accessToken = $connectionOauth->oauth("oauth/access_token", array("oauth_verifier" => $_REQUEST['oauth_verifier']));
     $_SESSION['access_token'] = $accessToken;
 
-    header("Location:index");
+    header('Location: ./');
 }
 
 include "layout/footer.php";
