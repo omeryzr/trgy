@@ -6,9 +6,9 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 if (!isset($_SESSION['access_token'])) {
     include 'login.php';
     echo "<div class='jumbotron'>
-            <h1>Theme example</h1>
-            <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.
-            <br><a href = '$url'> <img src='images/signIn.png' style='width: 200px'> </a></p>
+            <h1>SociaLogin</h1>
+            <p>SociaLogin uygulaması ile twitter hesabınız veya hesaplarınıza bir çok yönde etki edebilirsiniz. Uygulamaya girerken şifre gereği duymadan özelliklerden faydalanabilirsiniz.
+            <br><center><a href = '$url'> <img src='images/signIn.png' style='width: 300px'></center></a></p>
           </div>";
 }
 else
