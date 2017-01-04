@@ -3,7 +3,6 @@ include "layout/header.php";
 
 require "vendor/TwitterOAuth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
-echo"<br><br><br><div class='container theme-showcase' role='main'>";
 if (!isset($_SESSION['access_token'])) {
     include 'login.php';
 }
@@ -77,5 +76,5 @@ else
 
     echo "</div>";
 }
-echo "</div>";
+
 include "layout/footer.php";

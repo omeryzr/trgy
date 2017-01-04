@@ -51,5 +51,6 @@
           </center>
       </div>
     </div>
+    <br><br><br><div class='container theme-showcase' role='main'>"
       <!-- Carousel
       ================================================== -->
