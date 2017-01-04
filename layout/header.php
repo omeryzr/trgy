@@ -65,6 +65,7 @@
                     <li><a href='/profile'>Profil</a></li>
                     <li><a href='/followers'>Takipçiler</a></li>
                     <li><a href='/friends'>Takip Ettiklerim</a></li>
+                    <li><a href='/kullanim'>Ne İşe Yarar?</a></li>
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
                     <li><a href='/logout'><i class='glyphicon glyphicon-circle-arrow-right'></i> Çıkış</a>
