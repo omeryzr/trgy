@@ -1,6 +1,6 @@
 <?php
 include "layout/header.php";
-
+include 'login.php';
 echo "<div class='jumbotron'>
         <h1>SociaLogin Nedir ?</h1>
         <p>SociaLogin uygulaması ile twitter hesabınız veya hesaplarınıza bir çok yönde etki edebilirsiniz. Uygulamaya girerken şifre gereği duymadan özelliklerden faydalanabilirsiniz.
