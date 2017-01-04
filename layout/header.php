@@ -27,7 +27,7 @@
     <body>
       <?php
       if (!isset($_SESSION['access_token'])) {
-          include 'login.php';
+          
 
       echo "<div class='navbar navbar-default navbar-fixed-top'>
       <div class='container'>
@@ -81,6 +81,6 @@
       </div>
     </div>";
     }
-    <br><br><br><div class='container theme-showcase' role='main'>
+    echo "<br><br><br><div class='container theme-showcase' role='main'>
       <!-- Carousel
-      ================================================== -->
+      ================================================== -->";
