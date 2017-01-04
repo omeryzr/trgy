@@ -27,6 +27,13 @@
     <body>
       <?php
       if (!isset($_SESSION['access_token'])) {
+        $connection = new TwitterOAuth($consumerKey, $consumerSecret);
+        $requestToken = $connection->oauth('oauth/request_token', array('oauth_callback' => $oauthCallback));
+
+        $_SESSION['oauth_token'] = $requestToken['oauth_token'];
+        $_SESSION['oauth_token_secret'] = $requestToken['oauth_token_secret'];
+
+        $url = $connection->url('oauth/authorize', array('oauth_token' => $requestToken['oauth_token']));
       echo "<div class='navbar navbar-default navbar-fixed-top'>
       <div class='container'>
           <div class='navbar-header'>
@@ -44,7 +51,7 @@
                       <li><a href='/followers'>Ne İşe Yarar?</a></li>
                   </ul>
                   <ul class='nav navbar-nav navbar-right'>
-                      <li><a href='/login'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
+                      <li><a href = '$url'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
                   </ul>
 
               </div>
