@@ -27,6 +27,7 @@
     <body>
       <?php
       if (!isset($_SESSION['access_token'])) {
+        include 'login.php';
       echo "<div class='navbar navbar-default navbar-fixed-top'>
       <div class='container'>
           <div class='navbar-header'>
@@ -44,7 +45,7 @@
                       <li><a href='/followers'>Ne İşe Yarar?</a></li>
                   </ul>
                   <ul class='nav navbar-nav navbar-right'>
-                      <li><a href='/login'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
+                      <li><a href='$url'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
                   </ul>
 
               </div>
