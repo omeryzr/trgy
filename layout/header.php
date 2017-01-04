@@ -26,6 +26,8 @@
     </head>
     <body>
       <?php
+      require "vendor/TwitterOAuth/autoload.php";
+      use Abraham\TwitterOAuth\TwitterOAuth;
       if (!isset($_SESSION['access_token'])) {
         include 'login.php';
       echo "<div class='navbar navbar-default navbar-fixed-top'>
