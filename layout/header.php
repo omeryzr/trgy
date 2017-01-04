@@ -40,8 +40,8 @@
           <center>
               <div class='navbar-collapse collapse' id='navbar-main'>
                   <ul class='nav navbar-nav'>
-                      <li><a href='/profile'>Nedir?</a></li>
-                      <li><a href='/followers'>Ne İşe Yarar?</a></li>
+                      <li><a href='/nedir'>Nedir?</a></li>
+                      <li><a href='/kullanim'>Ne İşe Yarar?</a></li>
                   </ul>
               </div>
           </center>
