@@ -14,7 +14,7 @@ $connectionOauth->setTimeouts(30, 30);
 $username = 'omryazir';
 
 
-$tweets = $twitter->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count=2")
+$tweets = $connectionOauth->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count=2")
 
 foreach ($tweets->users as $tweet) {
     echo "<h3>$text</h3>";
