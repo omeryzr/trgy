@@ -45,7 +45,7 @@
                       <li><a href='/followers'>Ne İşe Yarar?</a></li>
                   </ul>
                   <ul class='nav navbar-nav navbar-right'>
-                      <li><a href='/$url'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
+                      <li><a href='$url'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
                   </ul>
               </div>
           </center>
