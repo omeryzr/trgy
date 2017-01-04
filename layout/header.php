@@ -39,12 +39,12 @@
           <center>
               <div class="navbar-collapse collapse" id="navbar-main">
                   <ul class="nav navbar-nav">
-                      <li><a href="/#wtopnedir">Neler Yapabilirim ?</a></li>
-                      <li><a href="/#nasil">Kullanım</a></li>
-
+                      <li><a href="/profile">Profil</a></li>
+                      <li><a href="/followers">Takipçiler</a></li>
+                      <li><a href="/friends">Takip Ettiklerim</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a href="/accounts/login"><i class="glyphicon glyphicon-circle-arrow-right"></i> Twitter İle Bağlan</a>
+                      <li><a href="/logout"><i class="glyphicon glyphicon-circle-arrow-right"></i> Çıkış</a>
                   </ul>
 
               </div>
