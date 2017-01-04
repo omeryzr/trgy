@@ -24,33 +24,63 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
     </head>
-
     <body>
-      <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-          <div class="navbar-header">
-              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
+      <?php
+      if (!isset($_SESSION['access_token'])) {
+          include 'login.php';
+
+      echo "<div class='navbar navbar-default navbar-fixed-top'>
+      <div class='container'>
+          <div class='navbar-header'>
+              <button class='navbar-toggle' type='button' data-toggle='collapse' data-target='#navbar-main'>
+                  <span class='icon-bar'></span>
+                  <span class='icon-bar'></span>
+                  <span class='icon-bar'></span>
               </button>
-              <a class="navbar-brand" href="/">Socialogin</a>
+              <a class='navbar-brand' href='/'>Socialogin</a>
           </div>
           <center>
-              <div class="navbar-collapse collapse" id="navbar-main">
-                  <ul class="nav navbar-nav">
-                      <li><a href="/profile">Profil</a></li>
-                      <li><a href="/followers">Takipçiler</a></li>
-                      <li><a href="/friends">Takip Ettiklerim</a></li>
+              <div class='navbar-collapse collapse' id='navbar-main'>
+                  <ul class='nav navbar-nav'>
+                      <li><a href='/profile'>Profil</a></li>
+                      <li><a href='/followers'>Takipçiler</a></li>
+                      <li><a href='/friends'>Takip Ettiklerim</a></li>
                   </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><a href="/logout"><i class="glyphicon glyphicon-circle-arrow-right"></i> Çıkış</a>
+                  <ul class='nav navbar-nav navbar-right'>
+                      <li><a href='/logout'><i class='glyphicon glyphicon-circle-arrow-right'></i> Çıkış</a>
                   </ul>
 
               </div>
           </center>
       </div>
-    </div>
-    <br><br><br><div class='container theme-showcase' role='main'>"
+    </div>";
+    }
+    else {
+      echo "<div class='navbar navbar-default navbar-fixed-top'>
+      <div class='container'>
+          <div class='navbar-header'>
+              <button class='navbar-toggle' type='button' data-toggle='collapse' data-target='#navbar-main'>
+                  <span class='icon-bar'></span>
+                  <span class='icon-bar'></span>
+                  <span class='icon-bar'></span>
+              </button>
+              <a class='navbar-brand' href='/'>Socialogin</a>
+          </div>
+          <center>
+              <div class='navbar-collapse collapse' id='navbar-main'>
+                  <ul class='nav navbar-nav'>
+                      <li><a href='/profile'>Nedir?</a></li>
+                      <li><a href='/followers'>Ne İşe Yarar?</a></li>
+                  </ul>
+                  <ul class='nav navbar-nav navbar-right'>
+                      <li><a href='/logout'><i class='glyphicon glyphicon-circle-arrow-right'></i> Bağlan</a>
+                  </ul>
+
+              </div>
+          </center>
+      </div>
+    </div>";
+    }
+    <br><br><br><div class='container theme-showcase' role='main'>
       <!-- Carousel
       ================================================== -->
