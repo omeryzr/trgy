@@ -16,14 +16,8 @@
 	// sıfını başlatalım
 	$twitter = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
 
-	// tw - kullanıcı adı
-	$username = 'siIaderki';
+  $followers = $connectionOauth->get("followers/list" , array('count' => 200));
 
-	// tw sayısı
-	$count = 5;
-
-	$tweets = $twitter->get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count='.$count);
-
-	print_r ($tweets);
+	print_r ($followers);
 
 include "layout/footer.php";
