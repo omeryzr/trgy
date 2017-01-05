@@ -15,7 +15,19 @@ else
 
     $tweets = $connectionOauth->get("statuses/user_timeline" , array('count' => 200));
 
-    print_r($tweets);
+    foreach ( $tweets as $tweet ){
+
+		$id = $tweet->id_str;
+		$text = $tweet->text;
+		$created_at = date("Y-m-d H:i:s", strtotime($tweet->created_at));
+
+		echo '<a href="https://twitter.com/'.$username.'/statuses/'.$id.'" target="_blank">
+			'.nl2br($text).'<br />
+			'.$created_at.' - #'.$id.'
+		</a>
+		<hr />';
+
+	}
 
 }
 
