@@ -15,7 +15,7 @@ else
 
     $tweets = $connectionOauth->get("statuses/user_timeline" , array('count' => 200));
 
-    print_r($tweets)
+    print_r($tweets);
 
 }
 
