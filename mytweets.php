@@ -15,11 +15,7 @@ else
 
     $tweets = $connectionOauth->get("statuses/user_timeline" , array('count' => 200));
 
-    foreach ($tweets as $tweet) {
-        echo "
-                <h3>$tweet->text</h3>
-            ";
-    }
+    print_r($tweets);
 
 }
 
