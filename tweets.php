@@ -6,7 +6,7 @@
 
   $connectionOauth = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
   $connectionOauth->setTimeouts(30, 30);
-
+  $query='ankara';
   $tweets->get('search/tweets.json', [
                                 'query' => ['q' => $query]
                         ]);
