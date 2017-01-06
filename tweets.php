@@ -5,12 +5,16 @@
   use Abraham\TwitterOAuth\TwitterOAuth;
 
 	// sıfını başlatalım
-  $twitter = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
-  $twitter->setTimeouts(30, 30);
+  $twitter = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
 
+   // tw - kullanıcı adı
+   $username = isset($_GET['username']) ? htmlspecialchars($_GET['username']) : NULL;
 
-	$tweets = $twitter->get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2');
+   // tw sayısı
+   $count = isset($_GET['count']) ? (int) $_GET['count'] : 5;
 
-	print_r($tweets);
+   $tweets = $twitter->get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count='.$count);
+
+   print json_encode($tweets);
 
   include "layout/footer.php";
