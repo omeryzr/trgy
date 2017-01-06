@@ -9,7 +9,10 @@
 
   $q = "muzyka";
 	$users = $connectionOauth->get('users/search', array('q' => $q));
-  print_r($users);
 
+  foreach ( $users as $user ){
+  $id = $user->id_str;
+  echo "$id";
+  }
 
   include "layout/footer.php";
