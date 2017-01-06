@@ -5,13 +5,9 @@
   use Abraham\TwitterOAuth\TwitterOAuth;
 
 	// sıfını başlatalım
-	$twitter = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+  $twitter = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+  $connectionOauth->setTimeouts(30, 30);
 
-	// tw - kullanıcı adı
-	$username = 'tayfunerbilen';
-
-	// tw sayısı
-	$count = 5;
 
 	$tweets = $twitter->get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2');
 
