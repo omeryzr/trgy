@@ -11,11 +11,11 @@
 	$users = $connectionOauth->get('users/search', array('q' => $q));
 	$a = json_decode($users, true);
 	echo "<pre>";
-	//print_r($a);
-	foreach ($a as $key => $user) {
-		echo $user['screen_name']." ".$user['id']." Follow user <br>";
-		$ret = $connectionOauth->post('friendships/create', array('user_id' => $user['id']));
-	}
+	print_r($a);
+	// foreach ($a as $key => $user) {
+	// 	echo $user['screen_name']." ".$user['id']." Follow user <br>";
+	// 	$ret = $connectionOauth->post('friendships/create', array('user_id' => $user['id']));
+	// }
 }
 
   include "layout/footer.php";
