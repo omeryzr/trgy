@@ -10,6 +10,6 @@
   $tweets = $connectionOauth->get('https://api.twitter.com/1.1/search/tweets.json?q=merhaba&result_type=recent&count=20');
 
   foreach ($tweets->statuses as $key => $tweet) {
-    echo "<img src='<?=$tweet->user->profile_image_url;?>' /><?=$tweet->text; ?><br>";
+    echo "$tweet->text";
  }
   include "layout/footer.php";
