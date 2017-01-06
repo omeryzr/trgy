@@ -7,19 +7,9 @@
   $connectionOauth = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
   $connectionOauth->setTimeouts(30, 30);
 
-  $tweets = $connectionOauth->get("search/tweets" , array('count' => 200));
+  $tweets = $connectionOauth->get('https://api.twitter.com/1.1/search/tweets.json?q=merhaba&result_type=recent&count=20');
 
-  $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-  $getfield = '?screen_name=j7mbo';
-  $requestMethod = 'GET';
-
-  $twitter = new TwitterAPIExchange($settings);
-  $response = $twitter->setGetfield($getfield)
-      ->buildOauth($url, $requestMethod)
-      ->performRequest();
-
-  var_dump(json_decode($response));
-
+  foreach ($tweets->statuses as $key => $tweet) { ?>
+    <img src="<?=$tweet->user->profile_image_url;?>" /><?=$tweet->text; ?><br>
 }
-
   include "layout/footer.php";
