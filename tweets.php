@@ -8,13 +8,12 @@
   $connectionOauth->setTimeouts(30, 30);
 
   $url = 'https://api.twitter.com/1.1/search/tweets.json';
-$getfield = '?q=#nerd';
-$requestMethod = 'GET';
+  $requestMethod = 'GET';
+  $getfield = '?q=#baseball&result_type=recent';
 
-$twitter = new TwitterAPIExchange($settings);
-$response = $twitter->setGetfield($getfield)
-    ->buildOauth($url, $requestMethod)
-    ->performRequest();
-
-var_dump(json_decode($response));
+// Perform the request
+  $twitter = new TwitterAPIExchange($settings);
+  echo $twitter->setGetfield($getfield)
+             ->buildOauth($url, $requestMethod)
+             ->performRequest();
   include "layout/footer.php";
