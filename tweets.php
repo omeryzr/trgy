@@ -70,7 +70,7 @@
       CURLOPT_HTTPHEADER => array("Authorization: $auth"),
       //CURLOPT_POSTFIELDS => $postfields,
       CURLOPT_HEADER => false,
-      CURLOPT_URL => $url . '?q=%23bookmyshow&count=2',
+      CURLOPT_URL => $url . '?q=bookmyshow&count=2',
       CURLOPT_RETURNTRANSFER => true, CURLOPT_SSL_VERIFYPEER => false
       );
       // do our business
