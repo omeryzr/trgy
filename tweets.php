@@ -4,17 +4,11 @@
   require "vendor/TwitterOAuth/autoload.php";
   use Abraham\TwitterOAuth\TwitterOAuth;
 
-	// sıfını başlatalım
-  $twitter = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+  $connectionOauth = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+  $connectionOauth->setTimeouts(30, 30);
 
-   // tw - kullanıcı adı
-   $username = isset($_GET['username']) ? htmlspecialchars($_GET['username']) : NULL;
+  $tweets = $connectionOauth->get("search/tweets" , array('count' => 200));
 
-   // tw sayısı
-   $count = isset($_GET['count']) ? (int) $_GET['count'] : 5;
-
-   $tweets = $twitter->get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name='.$username.'&count='.$count);
-
-   print json_encode($tweets);
+  print_r($tweets);
 
   include "layout/footer.php";
