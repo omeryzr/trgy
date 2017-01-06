@@ -7,14 +7,14 @@
   $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
   $tweet->setTimeouts(30, 30);
 
-  function search($tweet, $q = "tv"){
-	$users = $tweet->get('search/tweets', array('q' => $q, 'lang' => "pl", 'result_type' => 'popular'));
+  function podpowiedzi($tweet, $q = "muzyka"){
+	$users = $tweet->get('users/search', array('q' => $q));
 	$a = json_decode($users, true);
 	echo "<pre>";
-	print_r($a);
+	//print_r($a);
 	foreach ($a as $key => $user) {
 		echo $user['screen_name']." ".$user['id']." Follow user <br>";
-		//$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
+		$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
 	}
 }
   include "layout/footer.php";
