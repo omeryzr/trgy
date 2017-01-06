@@ -13,7 +13,7 @@
 	echo "<pre>";
 	print_r($a);
 	foreach ($a as $key => $user) {
-		//echo $user['screen_name']." ".$user['id']." Follow user <br>";
+		echo $user['screen_name']." ".$user['id']." Follow user <br>";
 		//$ret = $tweet->post('friendships/create', array('user_id' => $user['id']));
 	}
 }
