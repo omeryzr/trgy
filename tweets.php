@@ -11,7 +11,7 @@
 	$users = $connectionOauth->get('users/search', array('q' => $q));
 
   foreach ( $users as $user ){
-  $id = $user->id_str;
+  $name = $user->name;
   echo "$id";
   }
 
