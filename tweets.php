@@ -7,9 +7,14 @@
   $connectionOauth = new TwitterOAuth($consumerKey, $consumerSecret, $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
   $connectionOauth->setTimeouts(30, 30);
 
-  $tweets = $connectionOauth->get('https://api.twitter.com/1.1/search/tweets.json?q=merhaba&result_type=recent&count=20');
+  $url = 'https://api.twitter.com/1.1/search/tweets.json';
+$getfield = '?q=#nerd';
+$requestMethod = 'GET';
 
-  foreach ($tweets->statuses as $key => $tweet) {
-    echo "$tweet->text";
- }
+$twitter = new TwitterAPIExchange($settings);
+$response = $twitter->setGetfield($getfield)
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
+
+var_dump(json_decode($response));
   include "layout/footer.php";
